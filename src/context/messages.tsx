@@ -31,7 +31,7 @@ const messagesReducer = (
       return {
         ...state,
         total: state.total + 1,
-        [type]: [...state[type as keyof typeof EPriority], action.payload]
+        [type]: [action.payload, ...state[type as keyof typeof EPriority]]
       };
     }
     case 'REMOVE_MESSAGE': {
