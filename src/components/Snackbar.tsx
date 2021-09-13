@@ -26,7 +26,7 @@ const Snackbar = ({ errors }: IProps) => {
   };
 
   useEffect(() => {
-    if (errors.length) {
+    if (errors.length && errors.length > snackPack.length) {
       if (currentMessage && open) {
         setOpen(false);
       }
@@ -36,6 +36,8 @@ const Snackbar = ({ errors }: IProps) => {
       setSnackPack(newSnackPack);
       setCurrentMessage(newSnackPack[0]);
       setOpen(true);
+    } else {
+      setSnackPack(errors);
     }
 
     return () => {
