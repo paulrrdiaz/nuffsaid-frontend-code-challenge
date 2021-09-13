@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { useEffect } from 'react';
-import generateMessage, { Message } from './Api';
+import generateMessage from '../api';
+import {IMessage} from '../lib/types'
 
 const App: React.FC<{}> = () => {
-  const [messages, setMessages] = useState<Message[]>([]);
+  const [messages, setMessages] = useState<IMessage[]>([]);
 
   useEffect(() => {
-    const cleanUp = generateMessage((message: Message) => {
+    const cleanUp = generateMessage((message: IMessage) => {
       setMessages(oldMessages => [...oldMessages, message]);
     });
     return cleanUp;

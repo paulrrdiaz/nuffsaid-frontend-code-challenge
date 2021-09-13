@@ -57,5 +57,16 @@
   "devDependencies": {
     "@types/faker": "^5.5.8",
     "@types/lodash": "^4.14.172"
+  },
+  "prettier": {
+    "printWidth": 80,
+    "tabWidth": 2,
+    "useTabs": false,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "none",
+    "bracketSpacing": true,
+    "jsxBracketSameLine": false,
+    "fluid": false
   }
 }
