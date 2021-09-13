@@ -68,7 +68,7 @@ const Snackbar = ({ errors }: IProps) => {
       open={open}
       autoHideDuration={2000}
       onClose={handleClose}
-      anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }}
+      anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
       TransitionProps={{
         onExit: handleExited
       }}
