@@ -31,7 +31,7 @@ const Snackbar = ({ errors }: IProps) => {
         setOpen(false);
       }
 
-      const newSnackPack = [errors[errors.length - 1], ...snackPack];
+      const newSnackPack = [errors[0], ...snackPack];
 
       setSnackPack(newSnackPack);
       setCurrentMessage(newSnackPack[0]);
